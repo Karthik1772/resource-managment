@@ -16,7 +16,8 @@ class _RegisterpageState extends State<Registerpage> {
   final TextEditingController _usnController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _confirmpasswordController = TextEditingController();
+  final TextEditingController _confirmpasswordController =
+      TextEditingController();
   final TextEditingController _branchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,6 @@ class _RegisterpageState extends State<Registerpage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              // SizedBox(height: 50),
               Text(
                 "Register",
                 style: GoogleFonts.varelaRound(
@@ -42,43 +42,40 @@ class _RegisterpageState extends State<Registerpage> {
                 hint: "First Name",
                 prefixIcon: Icons.abc,
               ),
-              // SizedBox(height: 30),
               CustomTextField(
                 controller: _lastNameController,
                 hint: "Last Name",
                 prefixIcon: Icons.abc,
               ),
-              // SizedBox(height: 30),
               CustomTextField(
                 controller: _usnController,
                 hint: "USN",
                 prefixIcon: Icons.person,
               ),
-              // SizedBox(height: 30),
               CustomTextField(
                 controller: _emailController,
                 hint: "Branch",
                 prefixIcon: Icons.account_balance_sharp,
               ),
-              // SizedBox(height: 30),
               CustomTextField(
                 controller: _passwordController,
                 hint: "Email",
                 prefixIcon: Icons.email,
               ),
-              // SizedBox(height: 30),
               CustomTextField(
+                isPasswordField: true,
+                isObscure: true,
                 controller: _confirmpasswordController,
                 hint: "Password",
                 prefixIcon: Icons.password,
               ),
-              // SizedBox(height: 30),
               CustomTextField(
+                isPasswordField: true,
+                isObscure: true,
                 controller: _branchController,
                 hint: "Confirm Password",
                 prefixIcon: Icons.password,
               ),
-              // SizedBox(height: 30),
               Buttons(
                 font: "Register",
                 onpressed: () {
