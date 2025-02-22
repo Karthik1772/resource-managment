@@ -70,7 +70,7 @@ class _LoginPageState extends State<LoginPage> {
                   recognizer:
                       TapGestureRecognizer()
                         ..onTap =
-                            () => Navigator.pushNamed(context, '/register'),
+                            () => Navigator.pushNamed(context, '/registerpage'),
                 ),
               ],
             ),
