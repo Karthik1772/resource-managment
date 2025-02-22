@@ -27,13 +27,17 @@ class AppTheme {
     inputDecorationTheme: InputDecorationTheme(
       suffixIconColor: AppColors.orange,
       prefixIconColor: AppColors.orange,
-
       hintStyle: GoogleFonts.poppins(color: AppColors.darkGrey),
       errorBorder: _borderTheme(AppColors.red, 2),
       focusedBorder: _borderTheme(AppColors.orange, 2),
       enabledBorder: _borderTheme(),
       disabledBorder: _borderTheme(),
       border: _borderTheme(),
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: WidgetStatePropertyAll(AppColors.orange),
+      ),
     ),
   );
 }

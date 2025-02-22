@@ -30,25 +30,29 @@ class _CustomTextFieldState extends State<CustomTextField> {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      controller: widget.controller,
-      cursorColor: AppColors.orange,
-      cursorHeight: 18,
-      obscureText: isObscure,
-      decoration: InputDecoration(
-        prefixIcon: Icon(widget.prefixIcon),
-        hintText: widget.hint,
-        suffixIcon:
-            widget.isPasswordField
-                ? IconButton(
-                  onPressed: () {
-                    setState(() {
-                      isObscure = !isObscure;
-                    });
-                  },
-                  icon: Icon(Icons.remove_red_eye_rounded),
-                )
-                : null,
+    return Container(
+      margin: EdgeInsets.only(left: 20, right: 20),
+      width: MediaQuery.of(context).size.width,
+      child: TextField(
+        controller: widget.controller,
+        cursorColor: AppColors.orange,
+        cursorHeight: 18,
+        obscureText: isObscure,
+        decoration: InputDecoration(
+          prefixIcon: Icon(widget.prefixIcon),
+          hintText: widget.hint,
+          suffixIcon:
+              widget.isPasswordField
+                  ? IconButton(
+                    onPressed: () {
+                      setState(() {
+                        isObscure = !isObscure;
+                      });
+                    },
+                    icon: Icon(Icons.remove_red_eye_rounded),
+                  )
+                  : null,
+        ),
       ),
     );
   }
