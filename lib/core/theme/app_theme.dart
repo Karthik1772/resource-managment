@@ -12,7 +12,7 @@ class AppTheme {
     useMaterial3: true,
   ).copyWith(
     scaffoldBackgroundColor: AppColors.white,
-    appBarTheme: AppBarTheme(
+    appBarTheme: AppBarTheme(//__________________________________________________________APP_BAR
       backgroundColor: AppColors.white,
       iconTheme: IconThemeData(color: AppColors.orange),
       actionsIconTheme: IconThemeData(color: AppColors.orange),
@@ -24,7 +24,7 @@ class AppTheme {
       ),
     ),
 
-    inputDecorationTheme: InputDecorationTheme(
+    inputDecorationTheme: InputDecorationTheme(//_____________________________________TEXT_FIELD
       suffixIconColor: AppColors.orange,
       prefixIconColor: AppColors.orange,
       hintStyle: GoogleFonts.poppins(color: AppColors.darkGrey),
@@ -34,7 +34,7 @@ class AppTheme {
       disabledBorder: _borderTheme(),
       border: _borderTheme(),
     ),
-    elevatedButtonTheme: ElevatedButtonThemeData(
+    elevatedButtonTheme: ElevatedButtonThemeData(//__________________________________BUTTONS
       style: ButtonStyle(
         backgroundColor: WidgetStatePropertyAll(AppColors.orange),
       ),

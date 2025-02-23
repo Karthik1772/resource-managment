@@ -19,6 +19,7 @@ class _LoginPageState extends State<LoginPage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
+          SizedBox(height: 10),
           Text(
             "Login",
             style: GoogleFonts.varelaRound(
