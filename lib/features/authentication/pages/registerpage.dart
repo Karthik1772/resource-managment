@@ -39,12 +39,7 @@ class _RegisterpageState extends State<Registerpage> {
               ),
               CustomTextField(
                 controller: _firstNameController,
-                hint: "First Name",
-                prefixIcon: Icons.abc,
-              ),
-              CustomTextField(
-                controller: _lastNameController,
-                hint: "Last Name",
+                hint: "Name",
                 prefixIcon: Icons.abc,
               ),
               CustomTextField(
@@ -61,6 +56,11 @@ class _RegisterpageState extends State<Registerpage> {
                 controller: _passwordController,
                 hint: "Email",
                 prefixIcon: Icons.email,
+              ),
+              CustomTextField(
+                controller: _lastNameController,
+                hint: "Phone Number",
+                prefixIcon: Icons.phone,
               ),
               CustomTextField(
                 isPasswordField: true,
