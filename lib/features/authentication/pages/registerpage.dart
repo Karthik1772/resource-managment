@@ -11,14 +11,13 @@ class Registerpage extends StatefulWidget {
 }
 
 class _RegisterpageState extends State<Registerpage> {
-  final TextEditingController _firstNameController = TextEditingController();
-  final TextEditingController _lastNameController = TextEditingController();
+  final TextEditingController _NameController = TextEditingController();
   final TextEditingController _usnController = TextEditingController();
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _confirmpasswordController =
-      TextEditingController();
   final TextEditingController _branchController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _phController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _cpasswordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +37,7 @@ class _RegisterpageState extends State<Registerpage> {
                 ),
               ),
               CustomTextField(
-                controller: _firstNameController,
+                controller: _NameController,
                 hint: "Name",
                 prefixIcon: Icons.abc,
               ),
@@ -48,31 +47,31 @@ class _RegisterpageState extends State<Registerpage> {
                 prefixIcon: Icons.person,
               ),
               CustomTextField(
-                controller: _emailController,
+                controller: _branchController,
                 hint: "Branch",
                 prefixIcon: Icons.account_balance_sharp,
               ),
               CustomTextField(
-                controller: _passwordController,
+                controller: _emailController,
                 hint: "Email",
                 prefixIcon: Icons.email,
               ),
               CustomTextField(
-                controller: _lastNameController,
+                controller: _phController,
                 hint: "Phone Number",
                 prefixIcon: Icons.phone,
               ),
               CustomTextField(
                 isPasswordField: true,
                 isObscure: true,
-                controller: _confirmpasswordController,
+                controller: _passwordController,
                 hint: "Password",
                 prefixIcon: Icons.password,
               ),
               CustomTextField(
                 isPasswordField: true,
                 isObscure: true,
-                controller: _branchController,
+                controller: _cpasswordController,
                 hint: "Confirm Password",
                 prefixIcon: Icons.password,
               ),
