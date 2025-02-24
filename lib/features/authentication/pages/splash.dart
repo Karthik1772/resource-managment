@@ -1,3 +1,4 @@
+import 'package:erp/core/theme/app_colors.dart';
 import 'package:erp/features/authentication/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:another_flutter_splash_screen/another_flutter_splash_screen.dart';
@@ -17,14 +18,14 @@ class _SplashState extends State<Splash> {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [Colors.white, Colors.white],
+          colors: [AppColors.white, AppColors.white],
         ),
         childWidget: SizedBox(
           height: 200,
           child: Image.asset('assets/logo.png'),
         ),
         duration: Duration(milliseconds: 1500),
-        animationDuration: Duration(milliseconds: 2000),
+        animationDuration: Duration(milliseconds: 1500),
         nextScreen: LoginPage(),
       ),
     );
