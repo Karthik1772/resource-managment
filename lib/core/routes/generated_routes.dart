@@ -18,22 +18,36 @@ import 'package:erp/features/Homepage/homepage.dart';
 import 'package:erp/features/Hostel/Hostel.dart';
 import 'package:erp/features/Library/Library.dart';
 import 'package:erp/features/Splash/splash.dart';
+import 'package:erp/features/authentication/bloc/authentication_bloc.dart';
 import 'package:erp/features/authentication/pages/login_page.dart';
 import 'package:erp/features/authentication/pages/registerpage.dart';
 import 'package:erp/features/profile/profile.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class Routes {
   static Route? onGenerate(RouteSettings settings) {
     switch (settings.name) {
       case "/login":
-        return MaterialPageRoute(builder: (context) => LoginPage());
+        return MaterialPageRoute(
+          builder:
+              (context) => BlocProvider(
+                create: (context) => AuthBloc(),
+                child: LoginPage(),
+              ),
+        );
+      case "/registerpage":
+        return MaterialPageRoute(
+          builder:
+              (context) => BlocProvider(
+                create: (context) => AuthBloc(),
+                child: Registerpage(),
+              ),
+        );
       case "/splash":
         return MaterialPageRoute(builder: (context) => Splash());
       case "/homepage":
         return MaterialPageRoute(builder: (context) => Homepage());
-      case "/registerpage":
-        return MaterialPageRoute(builder: (context) => Registerpage());
       case '/profile':
         return MaterialPageRoute(builder: (context) => const Profile());
       case '/academics':

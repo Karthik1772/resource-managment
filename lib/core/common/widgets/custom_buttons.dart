@@ -3,9 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Buttons extends StatefulWidget {
-  final String font;
+  final String text;
   final VoidCallback onpressed;
-  const Buttons({super.key, required this.font, required this.onpressed});
+  final bool isLoading;
+  const Buttons({
+    super.key,
+    required this.text,
+    required this.onpressed,
+    this.isLoading = false,
+  });
 
   @override
   State<Buttons> createState() => _ButtonsState();
@@ -16,25 +22,32 @@ class _ButtonsState extends State<Buttons> {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(left: 20, right: 20),
-      width: MediaQuery.of(context).size.width,
-      height: 50,
       child: ElevatedButton(
-        onPressed: widget.onpressed,
-        style: ButtonStyle(
-          shape: WidgetStatePropertyAll(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(10)),
-            ),
+        style: ElevatedButton.styleFrom(
+          fixedSize: Size(MediaQuery.of(context).size.width, 50),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
           ),
         ),
-        child: Text(
-          widget.font,
-          style: GoogleFonts.varelaRound(
-            color: AppColors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 20,
-          ),
-        ),
+        onPressed: widget.isLoading ? null : widget.onpressed,
+        child:
+            widget.isLoading
+                ? SizedBox(
+                  width: 30,
+                  height: 30,
+                  child: CircularProgressIndicator(
+                    color: AppColors.orange,
+                    strokeCap: StrokeCap.round,
+                  ),
+                )
+                : Text(
+                  widget.text,
+                  style: GoogleFonts.varelaRound(
+                    color: AppColors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
       ),
     );
   }
