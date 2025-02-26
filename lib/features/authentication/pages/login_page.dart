@@ -52,10 +52,10 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             Container(
-              width: 200,
+             width: 200,
               height: 200,
               child: Image.asset("assets/logo.png"),
-            ),
+            ), 
             CustomTextField(
               controller: _emailController,
               hint: "Email",
@@ -70,9 +70,12 @@ class _LoginPageState extends State<LoginPage> {
             ),
             Align(
               alignment: Alignment(0.8, 0),
-              child: Text(
-                "Forgot password",
-                style: GoogleFonts.varelaRound(color: Colors.blue),
+              child: GestureDetector(
+                onTap: () => Navigator.pushNamed(context, '/forgotpass'),
+                child: Text(
+                  "Forgort Password",
+                  style: TextStyle(color: Colors.blue),
+                ),
               ),
             ),
             BlocBuilder<AuthBloc, AuthState>(

@@ -1,32 +1,37 @@
-import 'package:erp/core/theme/app_colors.dart';
-import 'package:erp/features/authentication/pages/login_page.dart';
 import 'package:flutter/material.dart';
-import 'package:another_flutter_splash_screen/another_flutter_splash_screen.dart';
+import 'package:erp/core/theme/app_colors.dart';
 
-class Splash extends StatefulWidget {
-  const Splash({super.key});
+class SplashScreen extends StatefulWidget {
+  final String? authToken;
+  const SplashScreen({super.key, required this.authToken});
 
   @override
-  State<Splash> createState() => _SplashState();
+  _SplashScreenState createState() => _SplashScreenState();
 }
 
-class _SplashState extends State<Splash> {
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+
+    // Delay for 1.5 seconds, then navigate to login or homepage
+    Future.delayed(const Duration(milliseconds: 1500), () {
+      Navigator.pushReplacementNamed(
+        context,
+        widget.authToken != null ? "/homepage" : "/login",
+      );
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: FlutterSplashScreen.scale(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [AppColors.white, AppColors.white],
-        ),
-        childWidget: SizedBox(
+      backgroundColor: AppColors.white,
+      body: Center(
+        child: Image.asset(
+          'assets/logo.png',
           height: 200,
-          child: Image.asset('assets/logo.png'),
-        ),
-        duration: Duration(milliseconds: 1500),
-        animationDuration: Duration(milliseconds: 1500),
-        nextScreen: LoginPage(),
+        ), // Ensure this file exists
       ),
     );
   }

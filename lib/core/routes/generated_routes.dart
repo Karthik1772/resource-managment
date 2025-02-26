@@ -21,6 +21,8 @@ import 'package:erp/features/Splash/splash.dart';
 import 'package:erp/features/authentication/bloc/authentication_bloc.dart';
 import 'package:erp/features/authentication/pages/login_page.dart';
 import 'package:erp/features/authentication/pages/registerpage.dart';
+import 'package:erp/features/forgotPassword/pages/forgotPass.dart';
+import 'package:erp/features/forgotPassword/pages/newpass.dart';
 import 'package:erp/features/profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -44,8 +46,12 @@ class Routes {
                 child: Registerpage(),
               ),
         );
+      case "/forgotpass":
+        return MaterialPageRoute(builder: (context) => ForgotPassword());
+      case "/newpass":
+        return MaterialPageRoute(builder: (context) => NewPass());
       case "/splash":
-        return MaterialPageRoute(builder: (context) => Splash());
+        return MaterialPageRoute(builder: (context) => SplashScreen(authToken: null,));
       case "/homepage":
         return MaterialPageRoute(builder: (context) => Homepage());
       case '/profile':
