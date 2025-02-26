@@ -35,7 +35,6 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   google_fonts: ^6.2.1
-  another_flutter_splash_screen: any
   syncfusion_flutter_gauges: ^28.2.6
   flutter_bloc: ^9.0.0
   hive: ^2.2.3
