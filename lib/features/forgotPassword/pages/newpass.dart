@@ -64,7 +64,7 @@ class _NewPassState extends State<NewPass> {
           Buttons(
             text: "Verify",
             onpressed: () {
-              Navigator.pushNamed(context, "/login");
+              Navigator.pushNamed(context, "/homepage");
             },
           ),
         ],

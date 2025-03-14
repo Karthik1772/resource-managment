@@ -100,9 +100,14 @@ class _HomepageState extends State<Homepage> {
                           Icons.notifications_on_rounded,
                           color: AppColors.orange,
                         ),
-                        trailing: Icon(
-                          Icons.arrow_forward_ios_rounded,
-                          color: AppColors.orange,
+                        trailing: IconButton(
+                          icon: Icon(
+                            Icons.arrow_forward_ios_rounded,
+                            color: AppColors.orange,
+                          ),
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/academics');
+                          },
                         ),
                       ),
                     ],
