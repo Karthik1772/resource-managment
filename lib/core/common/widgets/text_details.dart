@@ -8,7 +8,7 @@ class Details extends StatefulWidget {
   final String? ans;
   final double height;
   final double width;
-  Details({
+  const Details({
     super.key,
     this.name,
     this.ans,

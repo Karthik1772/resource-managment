@@ -39,7 +39,7 @@ class _HomepageState extends State<Homepage> {
                   surfaceTintColor: AppColors.transperent,
                   child: ListTile(
                     leading: CircleAvatar(
-                      backgroundImage: AssetImage('assets/download.jpg'),
+                      backgroundImage: AssetImage('assets/logo1.jpg'),
                       radius: 30,
                     ),
                     title: Text(

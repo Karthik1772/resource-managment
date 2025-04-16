@@ -51,10 +51,10 @@ class _LoginPageState extends State<LoginPage> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Container(
+            SizedBox(
               width: 200,
               height: 200,
-              child: Image.asset("assets/logo.png"),
+              child: Image.asset("assets/logo1.png"),
             ),
             CustomTextField(
               controller: _emailController,

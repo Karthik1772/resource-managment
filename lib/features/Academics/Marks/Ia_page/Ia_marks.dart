@@ -153,7 +153,7 @@ class _Ia_marksState extends State<Ia_marks> {
                         ],
                         rows: const [
                           DataRow(
-                            mouseCursor: MaterialStateMouseCursor.textable,
+                            mouseCursor: WidgetStateMouseCursor.textable,
                             cells: [
                               DataCell(Text('1')),
                               DataCell(Text('DBMS')),
@@ -225,7 +225,7 @@ class _Ia_marksState extends State<Ia_marks> {
                         ],
                         rows: const [
                           DataRow(
-                            mouseCursor: MaterialStateMouseCursor.textable,
+                            mouseCursor: WidgetStateMouseCursor.textable,
                             cells: [
                               DataCell(Text('1')),
                               DataCell(Text('DBMS')),

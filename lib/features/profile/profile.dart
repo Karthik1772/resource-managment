@@ -11,6 +11,7 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -69,13 +70,13 @@ class _ProfileState extends State<Profile> {
             Container(
               width: double.infinity,
               height: 30,
+              margin: EdgeInsets.only(top: 10, left: 20, right: 20),
               child: Text(
                 "Basic Details",
                 style: GoogleFonts.cormorant(
                   textStyle: TextStyle(fontSize: 20, color: AppColors.black),
                 ),
               ),
-              margin: EdgeInsets.only(top: 10, left: 20, right: 20),
             ),
             Details(
               height: 20,
@@ -112,17 +113,18 @@ class _ProfileState extends State<Profile> {
             Container(
               width: double.infinity,
               height: 30,
+              margin: EdgeInsets.only(top: 10, left: 20, right: 20),
               child: Text(
                 "Parental Details",
                 style: GoogleFonts.cormorant(
                   textStyle: TextStyle(fontSize: 20, color: AppColors.black),
                 ),
               ),
-              margin: EdgeInsets.only(top: 10, left: 20, right: 20),
             ),
             Container(
               width: double.infinity,
               height: 30,
+              margin: EdgeInsets.only(left: 25, right: 20),
               child: Text(
                 "Permanent Address",
                 style: TextStyle(
@@ -131,7 +133,6 @@ class _ProfileState extends State<Profile> {
                   color: AppColors.black,
                 ),
               ),
-              margin: EdgeInsets.only(left: 25, right: 20),
             ),
             Details(height: 20, width: 170, name: "State :", ans: "Karnataka"),
             Details(height: 20, width: 170, name: "District :", ans: "Mysore"),
@@ -147,6 +148,7 @@ class _ProfileState extends State<Profile> {
             Container(
               width: double.infinity,
               height: 30,
+              margin: EdgeInsets.only(left: 25, right: 20),
               child: Text(
                 "Father Details",
                 style: TextStyle(
@@ -155,7 +157,6 @@ class _ProfileState extends State<Profile> {
                   color: AppColors.black,
                 ),
               ),
-              margin: EdgeInsets.only(left: 25, right: 20),
             ),
             Details(height: 20, width: 170, name: "Name :", ans: "xyz"),
             Details(
@@ -182,6 +183,7 @@ class _ProfileState extends State<Profile> {
             Container(
               width: double.infinity,
               height: 30,
+              margin: EdgeInsets.only(left: 25, right: 20),
               child: Text(
                 "Mother Details",
                 style: TextStyle(
@@ -190,7 +192,6 @@ class _ProfileState extends State<Profile> {
                   color: AppColors.black,
                 ),
               ),
-              margin: EdgeInsets.only(left: 25, right: 20),
             ),
             Details(height: 20, width: 170, name: "Name :", ans: "xyz"),
             Details(

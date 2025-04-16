@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class Module extends StatefulWidget {
   final String name;
-  Module({super.key, required this.name});
+  const Module({super.key, required this.name});
 
   @override
   State<Module> createState() => _ModuleState();
@@ -14,7 +14,7 @@ class _ModuleState extends State<Module> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Container(
+      child: SizedBox(
         height: 150,
         width: double.infinity,
         child: Card(

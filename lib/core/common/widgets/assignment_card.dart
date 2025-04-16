@@ -15,7 +15,7 @@ class _AsgmtState extends State<Asgmt> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Container(
+      child: SizedBox(
         width: double.infinity,
         height: 200,
         child: Card(
@@ -25,7 +25,7 @@ class _AsgmtState extends State<Asgmt> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Container(
+              SizedBox(
                 width: double.infinity,
                 height: 75,
                 child: Center(
@@ -38,7 +38,7 @@ class _AsgmtState extends State<Asgmt> {
                   ),
                 ),
               ),
-              Container(
+              SizedBox(
                 width: double.infinity,
                 height: 90,
                 child: Row(
