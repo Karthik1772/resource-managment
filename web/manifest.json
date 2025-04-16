@@ -1,6 +1,6 @@
 {
-    "name": "erp",
-    "short_name": "erp",
+    "name": "studentix",
+    "short_name": "studentix",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

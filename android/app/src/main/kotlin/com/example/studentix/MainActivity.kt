@@ -1,4 +1,4 @@
-package com.example.erp
+package com.example.studentix
 
 import io.flutter.embedding.android.FlutterActivity
 
